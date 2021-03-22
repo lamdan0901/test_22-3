@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    background-color: rgb(229, 243, 224);
+
+}
+
+:root {
+    --font-size-small: 15px;
+    --font-size1: 45px;
+    --line-height1: 55px;
+}
+
+.top-banner {
+    background: url('main-bg.jpg') no-repeat center center/cover;
+    /* this help the background stay in fixed position  */
+    background-attachment: fixed;
+    height: 540px;
+    position: relative;
+}
+
+/*we can use ':after / :before' instead of a class in a div*/
+.top-banner::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(left, #000000de 0%, #0000002e 50%, transparent 100%);
+}
+
+.top-banner .main-nav {
+    display: flex;
+    /* do để bg gradient nên mấy cái contents phải có 2 cái dưới thì mới ko bị phủ và click đc*/
+    position: absolute;
+    width: 100%;
+}
+
+.top-banner .main-nav .column {
+    width: 33.33%;
+}
+
+.top-banner .main-nav .column.left-col a {
+    color: white;
+    display: inline-block;
+    padding: 12px;
+    font-size: 20px;
+}
+
+.top-banner .main-nav .column.left-col a:hover {
+    color: blue;
+}
+
+.top-banner .main-nav .column.mid-col {
+    text-align: center;
+}
+
+.top-banner .main-nav .column.mid-col img {
+    margin-top: 0.75rem;
+    width: 120px;
+}
+
+.top-banner .main-nav .column.right-col {
+    text-align: right;
+}
+
+.top-banner .main-nav .column.right-col a {
+    color: white;
+    display: inline-block;
+    padding: 12px 10px;
+    font-size: 15px;
+}
+
+.top-banner .main-nav .column.right-col a:hover {
+    color: blue;
+}
+
+/* Text Banner */
+.txt-banner {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+}
+
+.txt-banner .content {
+    width: 768px;
+    margin: auto;
+    color: white;
+}
+
+.txt-banner .content .small-txt {
+    font-size: var(--font-size-small);
+}
+
+.txt-banner .content h1 {
+    font-size: var(--font-size1);
+    line-height: var(--line-height1);
+    width: 60%;
+}
+
+/* Content1 */
+.content1 {
+    width: 768px;
+    margin: auto;
+    padding: 80px 0;
+    display: flex;
+    color: rgb(65, 65, 65);
+}
+
+.content1 .left-col {
+    width: 50%;
+    margin-top: 10px;
+}
+
+.content1 .left-col h2 {
+    width: 55%;
+    font-weight: bold;
+}
+
+.content1 .right-col {
+    width: 65%;
+}
+
+/* the right arrows */
+.content1 .right-col p::before {
+    content: '\f178';
+    font: normal normal normal 16px/1 FontAwesome;
+    position: relative;
+    left: -20px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.content1 .right-col p:hover:before {
+    left: 0;
+    opacity: 1;
+}
+
+.content1 .right-col p {
+    line-height: 20px;
+    margin-top: 10px;
+}
