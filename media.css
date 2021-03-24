@@ -1,10 +1,9 @@
 @media (max-width:768px) {
-    body {
-        /* width: 768px; */
-    }
+    /* body {} */
 
     .top-banner {
         height: 440px;
+        overflow: hidden;
     }
 
     .txt-banner {
@@ -39,6 +38,24 @@
 }
 
 @media (max-width:468px) {
+    .top-banner {
+        height: 350px;
+        overflow: hidden;
+    }
+
+    /* Text Banner */
+    .txt-banner .content {
+        width: 568px;
+        margin: auto;
+        color: white;
+    }
+
+    .txt-banner .content h1 {
+        font-size: var(--font-size2);
+        line-height: var(--line-height2);
+        width: 55%;
+    }
+
     .content1 {
         width: 368px;
         display: block;
